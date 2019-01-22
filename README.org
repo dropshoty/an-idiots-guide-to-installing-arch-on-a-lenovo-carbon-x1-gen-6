@@ -712,6 +712,9 @@
       - to my knowledge, we only have 32 bit drivers in case you are
         wondering why we are instaling 32 bit drivers /shrug 
         #+BEGIN_SRC sh
+          pacman -S xf86-video-intel vulkan-intel mesa
+          
+          EnableGuC, HuC, frame buffer and fastboot NewFile (in /etc/modprobe.d/i915.conf: options i915 enable_guc=3 enable_fbc=1 fastboot=1)
           pacman -S xf86-video-intel lib32-intel-dri lib32-mesa lib32-libgl
         #+END_SRC
       - at this point, if you want, you can use a very primitive GUI via
